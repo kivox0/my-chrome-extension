@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<style>
+  body { width: 300px; margin: 0; padding: 14px; font: 14px system-ui, sans-serif; }
+  label { display: block; margin: 10px 0 4px; color: #444; font-size: 12px; }
+  input { width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #bbb; border-radius: 6px; font: inherit; }
+  button { width: 100%; margin-top: 14px; padding: 10px; border: 0; border-radius: 6px; background: #1a73e8; color: #fff; font: 600 14px system-ui, sans-serif; cursor: pointer; }
+  #status { margin-top: 10px; color: #555; font-size: 12px; min-height: 16px; }
+</style>
+</head>
+<body>
+  <label for="target">Адрес, к которому ищем ближайшее</label>
+  <input id="target" placeholder="ул. Ленина, 1">
+  <label for="city">Город</label>
+  <input id="city" placeholder="Улан-Удэ">
+  <label for="radius">Подсветить ближе, км</label>
+  <input id="radius" type="number" min="0.1" step="0.1" value="3">
+  <label for="limit">Максимум объявлений для проверки</label>
+  <input id="limit" type="number" min="10" step="10" value="100">
+  <label style="display:flex;gap:6px;align-items:center;margin-top:10px;color:#111;font-size:13px">
+    <input id="auto" type="checkbox" checked style="width:auto"> Подгружать объявления автоматически
+  </label>
+  <button id="go">Искать ближайшие на этой странице</button>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
